@@ -13,7 +13,10 @@ class Carro {
     ano: number = 0
     potencia:number = 0
 
-   // modelo 1
+    ligado:boolean
+    aceleracao:number
+
+   // modelo 1 - método construtor
     // constructor(cor:string, marca:string, modelo:string, ano:number, potencia?:number){
     //     this.cor = cor
     //     this.marca = marca
@@ -22,14 +25,20 @@ class Carro {
     //     this.potencia = potencia ?? 0
     // }
 
-    //modelo 2
+    //modelo 2 - método construtor
     constructor(carro:Tcarro){
         this.cor = carro.cor
         this.marca = carro.marca
         this.modelo = carro.modelo
         this.ano = carro.ano
         this.potencia = carro.potencia ?? 0
+        this.ligado = false
+        this.aceleracao= 0
     }
+    LigarouDesligar():void{this.ligado = this.ligado ? false : true}
+    acelerar(rpm:number):void {this.aceleracao += rpm}
+    estadoDoCarro(){ return this.ligado ? 'o carro está ligado' : 'O carro está desligado' }
+
 }
 
 //modelo 1

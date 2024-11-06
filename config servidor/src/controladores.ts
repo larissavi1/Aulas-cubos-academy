@@ -5,7 +5,8 @@ const pessoas = [
     {nome: 'maria', email: 'maria@email.com'},
     {nome: 'joao', email: 'joao@email.com'}]
 
-export const ItemProdutos = (req:Request, res:Response) => {
+
+    export const ItemProdutos = (req:Request, res:Response) => {
     console.log(req.params.item)
     res.send('o nodemon está configurando o typescript')}
 

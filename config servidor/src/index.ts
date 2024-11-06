@@ -9,7 +9,6 @@ const servidor = express()
 
 
 servidor.use(intermediariogeral)
-
 servidor.get ('/produtos/:item',meuprimeirointermediario, ItemProdutos)
 
 servidor.get ('/usuarios/:email',buscarUsuario)
